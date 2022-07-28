@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/cat_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:fontFamily="@font/poppins"
+        android:padding="4dp"
+        android:textColor="?attr/admin_text_color"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8"
+        android:text="@string/category_item_count" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/item_counts"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:padding="4dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cat_item_name">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/count_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/item_counts"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/add_item_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_login_btn"
+        android:elevation="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_counts"
+        app:layout_constraintWidth_percent=".50"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/add_item_button"
+        app:layout_constraintEnd_toEndOf="@id/add_item_button"
+        app:layout_constraintStart_toStartOf="@id/add_item_button"
+        app:layout_constraintTop_toTopOf="@id/add_item_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.inferno.mobile.accountent.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_adminDashboardFragment"
+            app:destination="@id/admin_graph" />
+        <action
+            android:id="@+id/action_nav_home_to_ownerDashboardFragment"
+            app:destination="@id/owner_graph" />
+        <action
+            android:id="@+id/action_nav_home_to_managerDashboardFragment"
+            app:destination="@id/manager_graph" />
+        <action
+            android:id="@+id/action_nav_home_to_cashierDashboardFragment"
+            app:destination="@id/cashier_graph" />
+        <action
+            android:id="@+id/action_nav_home_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_customerDashboardFragment"
+            app:destination="@id/customer_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.inferno.mobile.accountent.ui.signup.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/sign_up_fragement" >
+        <action
+            android:id="@+id/action_signUpFragment_to_cashier_graph"
+            app:destination="@id/cashier_graph" />
+    </fragment>
+    <navigation
+        android:id="@+id/admin_graph"
+        app:startDestination="@id/adminDashboardFragment">
+        <fragment
+            android:id="@+id/adminDashboardFragment"
+            android:name="com.inferno.mobile.accountent.ui.admin.dashboard.AdminDashboardFragment"
+            android:label="AdminDashboardFragment"
+            tools:layout="@layout/admin_dashboard_fragment">
+            <action
+                android:id="@+id/action_adminDashboardFragment_to_addAdminFragment"
+                app:destination="@id/addAdminFragment" />
+            <action
+                android:id="@+id/action_adminDashboardFragment_to_removeAdminFragment"
+                app:destination="@id/removeAdminFragment" />
+            <action
+                android:id="@+id/action_adminDashboardFragment_to_showAllRequestFragment2"
+                app:destination="@id/showAllRequestFragment" />
+            <action
+                android:id="@+id/action_adminDashboardFragment_to_addShopOwnerFragment"
+                app:destination="@id/addShopOwnerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/removeAdminFragment"
+            android:name="com.inferno.mobile.accountent.ui.admin.remove_admin.RemoveAdminFragment"
+            android:label="RemoveAdminFragment"
+            tools:layout="@layout/remove_fragment" />
+        <fragment
+            android:id="@+id/addAdminFragment"
+            android:name="com.inferno.mobile.accountent.ui.admin.add_new_admin.AddAdminFragment"
+            android:label="AddAdminFragment"
+            tools:layout="@layout/add_admin_fragment" />
+        <fragment
+            android:id="@+id/addShopOwnerFragment"
+            android:name="com.inferno.mobile.accountent.ui.admin.add_shop_owner.AddShopOwnerFragment"
+            android:label="AddShopOwnerFragment"
+            tools:layout="@layout/add_shop_owner_fragment" />
+        <fragment
+            android:id="@+id/showAllRequestFragment"
+            android:name="com.inferno.mobile.accountent.ui.admin.show_all_requests.ShowAllRequestFragment"
+            android:label="ShowAllRequestFragment"
+            tools:layout="@layout/show_all_requests" />
+    </navigation>
+    <navigation
+        android:id="@+id/owner_graph"
+        app:startDestination="@id/ownerDashboardFragment">
+        <fragment
+            android:id="@+id/addShopRequestFragment"
+            android:name="com.inferno.mobile.accountent.ui.owner.add_shop_request.AddShopRequestFragment"
+
+            android:label="AddShopestFragme"
+            tools:layout="@layout/shop_add_request_owner">
+        <argument
+            android:name="shop"
+            app:argType="com.inferno.mobile.accountent.models.Shop"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerDashboardFragment"
+        android:name="com.inferno.mobile.accountent.ui.owner.dashboard.OwnerDashboardFragment"
+        android:label="OwnerDashboardFragment"
+        tools:layout="@layout/owner_dash_board">
+        <action
+            android:id="@+id/action_ownerDashboardFragment_to_addShopRequestFragment"
+            app:destination="@id/addShopRequestFragment" />
+        <action
+            android:id="@+id/action_ownerDashboardFragment_to_addShopManagerFragment"
+            app:destination="@id/showOwnerShopsFragment" />
+        <action
+            android:id="@+id/action_ownerDashboardFragment_to_ownerRequestFragment"
+            app:destination="@id/ownerRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerRequestFragment"
+        android:name="com.inferno.mobile.accountent.ui.owner.owner_requests.OwnerRequestFragment"
+        android:label="OwnerRequestFragment"
+        tools:layout="@layout/owner_requests">
+        <action
+            android:id="@+id/action_ownerRequestFragment_to_addShopRequestFragment"
+            app:destination="@id/addShopRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShopManager"
+        android:name="com.inferno.mobile.accountent.ui.owner.add_shop_manager.add_manager.AddShopManager"
+        android:label="AddShopManager"
+        tools:layout="@layout/add_shop_manager">
+        <argument
+            android:name="shopId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/showOwnerShopsFragment"
+        android:name="com.inferno.mobile.accountent.ui.owner.add_shop_manager.ShowOwnerShopsFragment"
+        android:label="AddShopManagerFragment"
+        tools:layout="@layout/show_owner_shops">
+        <action
+            android:id="@+id/action_showOwnerShopsFragment_to_addShopManager"
+            app:destination="@id/addShopManager" />
+        <argument
+            android:name="add"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
+    <navigation android:id="@+id/cashier_graph"
+        app:startDestination="@id/cashierDashboardFragment">
+        <fragment
+            android:id="@+id/receiptFragment"
+            android:name="com.inferno.mobile.accountent.ui.cashier.receipt.ReceiptFragment"
+            android:label="ReceiptFragment"
+            tools:layout="@layout/receipt_fragment">
+            <argument
+                android:name="items"
+                app:argType="java.util.ArrayList" />
+            <argument
+                android:name="show"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </fragment>
+        <fragment
+            android:id="@+id/showCategoriesFragment2"
+            android:name="com.inferno.mobile.accountent.ui.cashier.add_item_to_category.show_categories.ShowCategoriesFragment"
+            android:label="ShowCategoriesFragment"
+            tools:layout="@layout/show_categories_fragment">
+            <action
+                android:id="@+id/action_showCategoriesFragment2_to_addCategoryFragment"
+                app:destination="@id/addCategoryFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/cashierDashboardFragment"
+            android:name="com.inferno.mobile.accountent.ui.cashier.dashboard.CashierDashboardFragment"
+            android:label="CashierDashboardFragment"
+            tools:layout="@layout/cashier_dashboard">
+            <action
+                android:id="@+id/action_cashierDashboardFragment_to_showCategoriesFragment2"
+                app:destination="@id/showCategoriesFragment2" />
+            <action
+                android:id="@+id/action_cashierDashboardFragment_to_createBillFragment"
+                app:destination="@id/createBillFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/createBillFragment"
+            android:name="com.inferno.mobile.accountent.ui.cashier.create_bill.CreateBillFragment"
+            android:label="CreateBillFragment"
+            tools:layout="@layout/create_bill_fragment">
+            <action
+                android:id="@+id/action_createBillFragment_to_itemScannerFragment"
+                app:destination="@id/itemScannerFragment" />
+            <action
+                android:id="@+id/action_createBillFragment_to_receiptFragment"
+                app:destination="@id/receiptFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/addCategoryFragment"
+            android:name="com.inferno.mobile.accountent.ui.manager.add_category.AddCategoryFragment"
+            android:label="AddCategoryFragment"
+            tools:layout="@layout/add_category_fragment">
+            <argument
+                android:name="shopId"
+                app:argType="integer" />
+            <action
+                android:id="@+id/action_addCategoryFragment_to_itemScannerFragment"
+                app:destination="@id/itemScannerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/itemScannerFragment"
+            android:name="com.inferno.mobile.accountent.ui.cashier.add_item_to_category.item_scanner.ItemScannerFragment"
+            android:label="ItemScannerFragment"
+            tools:layout="@layout/item_scanner">
+            <argument
+                android:name="adapter"
+                app:argType="com.inferno.mobile.accountent.adapters.CreateBillRecyclerViewAdapter"
+                app:nullable="true" />
+            <argument
+                android:name="is_link"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </fragment>
+    </navigation>
+
+    <navigation android:id="@+id/manager_graph"
+        app:startDestination="@id/managerDashboardFragment">
+        <fragment
+            android:id="@+id/addCashierFragment"
+            android:name="com.inferno.mobile.accountent.ui.manager.add_cashier.AddCashierFragment"
+            android:label="AddCashierFragment"
+            tools:layout="@layout/add_cashier_fragment" />
+
+        <fragment
+            android:id="@+id/removeCashierFragment"
+            android:name="com.inferno.mobile.accountent.ui.manager.remove_cashier.RemoveCashierFragment"
+            android:label="RemoveCashierFragment"
+            tools:layout="@layout/remove_cashier_fragment" />
+        <fragment
+            android:id="@+id/managerDashboardFragment"
+            android:name="com.inferno.mobile.accountent.ui.manager.dashboard.ManagerDashboardFragment"
+            android:label="ManagerDashboardFragment"
+            tools:layout="@layout/manager_dashboard">
+            <action
+                android:id="@+id/action_managerDashboardFragment_to_showCategoriesFragment"
+                app:destination="@id/showCategoriesFragment" />
+            <action
+                android:id="@+id/action_managerDashboardFragment_to_addCashierFragment"
+                app:destination="@id/addCashierFragment" />
+            <action
+                android:id="@+id/action_managerDashboardFragment_to_removeCashierFragment"
+                app:destination="@id/removeCashierFragment" />
+            <action
+                android:id="@+id/action_managerDashboardFragment_to_showCompanyFragment"
+                app:destination="@id/showCompanyFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/showCategoriesFragment"
+            android:name="com.inferno.mobile.accountent.ui.manager.show_categories.ShowCategoriesFragment"
+            android:label="ShowCategoriesFragment">
+            <argument
+                android:name="comp_id"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/showCompanyFragment"
+            android:name="com.inferno.mobile.accountent.ui.manager.add_company.ShowCompanyFragment"
+            android:label="show_comanies_fragment"
+            tools:layout="@layout/show_comanies_fragment" >
+            <action
+                android:id="@+id/action_showCompanyFragment_to_showCategoriesFragment"
+                app:destination="@id/showCategoriesFragment" />
+        </fragment>
+    </navigation>
+    <navigation android:id="@+id/customer_graph"
+        app:startDestination="@id/customerDashboardFragment">
+        <fragment
+            android:id="@+id/customerDashboardFragment"
+            android:name="com.inferno.mobile.accountent.ui.customer.dashboard.CustomerDashboardFragment"
+            android:label="customer_dashboard_fragment"
+            tools:layout="@layout/customer_dashboard_fragment">
+            <action
+                android:id="@+id/action_customerDashboardFragment_to_linkBillFragment"
+                app:destination="@id/linkBillFragment" />
+            <action
+                android:id="@+id/action_customerDashboardFragment_to_myBillsFragment"
+                app:destination="@id/myBillsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/linkBillFragment"
+            android:name="com.inferno.mobile.accountent.ui.customer.link_bill.LinkBillFragment"
+            android:label="LinkBillFragment">
+            <action
+                android:id="@+id/action_linkBillFragment_to_itemScannerFragment"
+                app:destination="@id/itemScannerFragment" />
+            <action
+                android:id="@+id/action_linkBillFragment_to_receiptFragment"
+                app:destination="@id/receiptFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/itemScannerFragment"
+            android:name="com.inferno.mobile.accountent.ui.cashier.add_item_to_category.item_scanner.ItemScannerFragment"
+            android:label="ItemScannerFragment"
+            tools:layout="@layout/item_scanner">
+            <argument
+                android:name="adapter"
+                app:argType="com.inferno.mobile.accountent.adapters.CreateBillRecyclerViewAdapter"
+                app:nullable="true" />
+            <argument
+                android:name="is_link"
+                app:argType="boolean"
+                android:defaultValue="false" />
+        </fragment>
+        <fragment
+            android:id="@+id/receiptFragment"
+            tools:layout="@layout/receipt_fragment"
+            android:name="com.inferno.mobile.accountent.ui.cashier.receipt.ReceiptFragment"
+            android:label="ReceiptFragment">
+            <argument
+                android:name="items"
+                app:argType="java.util.ArrayList" />
+            <argument
+                android:name="show"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </fragment>
+        <fragment
+            android:id="@+id/myBillsFragment"
+            tools:layout="@layout/my_bills_fragment"
+            android:name="com.inferno.mobile.accountent.ui.customer.my_bills.MyBillsFragment"
+            android:label="MyBillsFragment" >
+            <action
+                android:id="@+id/action_myBillsFragment_to_receiptFragment"
+                app:destination="@id/receiptFragment" />
+            <action
+                android:id="@+id/action_myBillsFragment_to_otherShopsFragment"
+                app:destination="@id/otherShopsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/otherShopsFragment"
+            android:name="com.inferno.mobile.accountent.ui.customer.show_owner_other_shops.OtherShopsFragment"
+            android:label="other_shops_fragment"
+            tools:layout="@layout/other_shops_fragment" >
+            <argument
+                android:name="owner"
+                app:argType="com.inferno.mobile.accountent.models.User" />
+        </fragment>
+    </navigation>
+</navigation>

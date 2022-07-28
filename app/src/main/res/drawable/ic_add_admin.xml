@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="61.7dp"
+    android:height="68dp"
+    android:viewportWidth="61.7"
+    android:viewportHeight="68">
+  <path
+      android:fillColor="?attr/admin_icon_color"
+      android:pathData="M11,12A12,12 0,1 1,23 24,12.035 12.035,0 0,1 11,12ZM31.3,40.2 L42,36.1A19.93,19.93 0,0 0,26 28L20,28A20.059,20.059 0,0 0,0 48L0,68L42,68c-9.5,-9.1 -11.9,-24.9 -12,-25.6A2.085,2.085 0,0 1,31.3 40.2ZM61.7,43.4c-1,4.7 -4.5,18.5 -13.7,24.3C38.8,61.8 35.2,48 34.3,43.4L48,38.1ZM54,51.8a2.006,2.006 0,0 0,-2 -2L50,49.8v-2a2,2 0,0 0,-4 0v2L44,49.8a2,2 0,0 0,0 4h2v2a2,2 0,0 0,4 0v-2h2A2.074,2.074 0,0 0,54 51.8Z"/>
+</vector>

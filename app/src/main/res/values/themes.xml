@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MobileAccountent" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/illusion</item>
+        <item name="colorPrimaryVariant">@color/cerise</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/pippin</item>
+        <item name="colorSecondaryVariant">@color/siren</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="login_header_svg">@drawable/ic_login_header</item>
+        <item name="login_header_text_color">@color/white</item>
+        <item name="login_background_color">#FCF0F2</item>
+        <item name="login_input_hint_color">#BAABC0</item>
+        <item name="login_sign_up_hint_color">#B600FF</item>
+        <item name="admin_background_header">@drawable/ic_login_header</item>
+        <item name="admin_background_card">@color/pippin</item>
+        <item name="admin_text_color">@color/black</item>
+        <item name="admin_icon_color">@color/black</item>
+        <item name="admin_hint_color">@color/gray500</item>
+        <item name="admin_background_card_items">@color/illusion</item>
+        <item name="admin_dashboard_card_width_dims">0.38</item>
+        <item name="admin_dashboard_card_width_dims_max">0.21</item>
+        <item name="admin_dashboard_card_icon_dims">0.29</item>
+
+        <item name="admin_card_child_1_start_color">#DA8ECD</item>
+        <item name="admin_card_child_1_end_color">@color/white</item>
+
+        <item name="admin_card_child_2_start_color">#D6A4A2</item>
+        <item name="admin_card_child_2_end_color">@color/white</item>
+
+        <item name="admin_card_child_3_start_color">#DA8ECD</item>
+        <item name="admin_card_child_3_end_color">@color/white</item>
+
+        <item name="admin_card_child_4_start_color">#D6A4A2</item>
+        <item name="admin_card_child_4_end_color">@color/white</item>
+
+    </style>
+
+    <style name="Theme.MobileAccountent.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Bill.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Bill.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

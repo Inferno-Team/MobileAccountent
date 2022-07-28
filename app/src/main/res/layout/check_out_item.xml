@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="4dp"
+    android:padding="4dp"
+    android:id="@+id/check_out_item"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="start"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".20"
+        tools:text="@string/category_name" />
+
+    <TextView
+        android:id="@+id/item_count"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="start"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".25"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="start"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".25"
+        tools:text="5000.0 ل.س" />
+
+    <TextView
+        android:id="@+id/full_price"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="start"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_price"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".25"
+        tools:text="150000.0 ل.س" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

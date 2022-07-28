@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_add_admin_background">
+
+    <ImageView
+        android:id="@+id/settings_view_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:tint="?attr/admin_background_card"
+        android:src="@drawable/settings_view_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8" />
+
+    <LinearLayout
+        android:id="@+id/dark_mode_selection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="@id/settings_view_background"
+        app:layout_constraintStart_toStartOf="@id/settings_view_background"
+        app:layout_constraintTop_toTopOf="@id/settings_view_background"
+        app:layout_constraintWidth_percent=".75">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_weight="8"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="@string/dark_theme"
+            android:textColor="?attr/admin_text_color"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/dark_mode_switch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/language_selection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="@id/settings_view_background"
+        app:layout_constraintStart_toStartOf="@id/settings_view_background"
+        app:layout_constraintTop_toBottomOf="@id/dark_mode_selection"
+        app:layout_constraintWidth_percent=".75">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_weight="8"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="@string/language"
+            android:textColor="?attr/admin_text_color"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:id="@+id/lang_flag"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_flag_of_syria" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout"
+        android:id="@+id/logout_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:backgroundTint="?attr/admin_card_child_2_start_color"
+        app:tint="?attr/admin_card_child_1_end_color"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

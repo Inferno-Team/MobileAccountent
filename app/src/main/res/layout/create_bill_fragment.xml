@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cashier.create_bill.CreateBillFragment"
+    android:background="@drawable/ic_add_admin_background">
+
+    <View
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_add_admin_container"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintWidth_percent=".8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/barcode_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/container"
+        app:layout_constraintVertical_bias=".15"
+        app:layout_constraintWidth_percent=".55">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/barcode_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/barcode"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/barcode_opener"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:elevation="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/barcode_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toEndOf="@id/barcode_container"
+        app:layout_constraintTop_toTopOf="@id/barcode_container"
+        app:srcCompat="@drawable/ic_qr_code" />
+
+    <ImageButton
+        android:id="@+id/add_item_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_login_btn"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".080"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode_container"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintWidth_percent=".50"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_item"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/add_item_button"
+        app:layout_constraintEnd_toEndOf="@id/add_item_button"
+        app:layout_constraintStart_toStartOf="@id/add_item_button"
+        app:layout_constraintTop_toTopOf="@id/add_item_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selected_items"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toBottomOf="@id/add_item_button"
+        tools:listitem="@layout/create_bill_category_item" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="@string/check_out"
+        app:icon="@drawable/ic_baseline_check_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".925" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

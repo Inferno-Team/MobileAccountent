@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Bill</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="homefragment">HomeFragment</string>
+    <string name="change_language">Change Language</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="add_shop_owner">Add Shop Owner</string>
+    <string name="add_new_admin">Add New Admin</string>
+    <string name="remove_admin">Remove Admin</string>
+    <string name="show_all_requests">All Requests</string>
+    <string name="logout">Logout</string>
+    <string name="language">Language</string>
+    <string name="hello_admin_root">Hello Admin : %1$s</string>
+    <string name="hello_owner">Hello Owner : %1$s</string>
+    <string name="hello_manager">Hello Manager : %1$s</string>
+    <string name="hello_cashier">Hello Cashier : %1$s</string>
+    <string name="hello_customer">Hello Customer : %1$s</string>
+    <string name="you_don_t_have_an_account_yet">Don\'t have account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="be_your_self">Be yourself at\nthe store</string>
+    <string name="add_new_adimn2">Add New Adimn2</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="add_show_request">Add Show\nRequest</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="location">Location</string>
+    <string name="add_shop_request">Add Shop Request</string>
+    <string name="edit_shop_request">Edit Shop Request</string>
+    <string name="add_shop_manager">Add Shop\nManager</string>
+    <string name="manager_name">Manager Name</string>
+    <string name="admin_list">Admin List</string>
+    <string name="request_time">Request Time</string>
+    <string name="response_time">Response Time</string>
+    <string name="already_approved">This shop already approved</string>
+    <string name="all_your_shops">All Your Shops</string>
+    <string name="choose_msg">Please Choose\nApproved Shop To add new Manager</string>
+    <string name="not_approved">this shop didn\'t approved yet.</string>
+    <string name="add_category">Add Category</string>
+    <string name="add_cashier">Add Cashier</string>
+    <string name="price">Price</string>
+    <string name="category_name">Category Name</string>
+    <string name="stock_count">Stock Count</string>
+    <string name="company_name">Company Name</string>
+    <string name="no_selected_company">Select Company First</string>
+    <string name="no_price_had_been_provided">No Price has been provided</string>
+    <string name="show_all_categories">Show All Categories</string>
+    <string name="currency">%1$s SP</string>
+    <string name="cashier_name">Cashier Name</string>
+    <string name="add_item_to_category">Add Item To Category</string>
+    <string name="add_new_bill">Add New Bill</string>
+    <string name="add_item">Add Item</string>
+    <string name="barcode">BarCode</string>
+    <string name="choose_expiration_date">Choose expiration period</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="dialog_title">Shop Approval</string>
+    <string name="dialog_msg">Do You want to approve this shop ?</string>
+    <string name="shop_owner_name">Shop Owner Name</string>
+    <string name="remove_manager">Remove Manager</string>
+    <string name="has_manager">Has Manager</string>
+    <string name="no_cats">There is no categories on This Shop Yet</string>
+    <string name="purchase_count">Count</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="item_counts">Item Counts</string>
+    <string name="done">Done</string>
+    <string name="category_item_count">Category Item Count</string>
+    <string name="check_out">Check Out</string>
+    <string name="full_price">Full Price</string>
+    <string name="remove_cashier">Remove Cashier</string>
+    <string name="name">Name</string>
+    <string name="owner_remove_manager_title">Remove Manager</string>
+    <string name="owner_remove_manager_msg">Do you want to remove this manager ?</string>
+    <string name="show_my_bill">My bill</string>
+    <string name="add_company">Add Company</string>
+    <string name="all_company">All Company</string>
+    <string name="company_cat_count">Category Number : %1$d</string>
+</resources>

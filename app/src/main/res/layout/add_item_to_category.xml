@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/ic_add_admin_background">
+
+    <ImageView
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_add_admin_container"
+        android:scaleType="fitXY"
+        app:tint="?attr/admin_background_card"
+
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expire_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="start"
+        android:padding="4dp"
+        android:text="@string/choose_expiration_date"
+        android:textColor="?attr/admin_text_color"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/container"
+        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintWidth_percent=".65" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/first_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="start"
+        android:padding="4dp"
+        android:textColor="?attr/admin_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toBottomOf="@id/expire_date"
+        app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintWidth_percent=".25"
+        android:visibility="gone"
+        tools:text="2-5-2021" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/second_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/poppins"
+        android:visibility="gone"
+        android:gravity="end"
+        android:padding="4dp"
+        android:textColor="?attr/admin_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toBottomOf="@id/expire_date"
+        app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintWidth_percent=".25"
+        tools:text="2-5-2021" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/barcode_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toBottomOf="@id/first_date"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".55">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/barcode_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/barcode"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/barcode_opener"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:elevation="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/barcode_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toEndOf="@id/barcode_container"
+        app:layout_constraintTop_toTopOf="@id/barcode_container"
+        app:srcCompat="@drawable/ic_qr_code" />
+
+    <ImageButton
+        android:id="@+id/add_item_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_login_btn"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".080"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode_container"
+        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintWidth_percent=".50" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_item"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/add_item_button"
+        app:layout_constraintEnd_toEndOf="@id/add_item_button"
+        app:layout_constraintStart_toStartOf="@id/add_item_button"
+        app:layout_constraintTop_toTopOf="@id/add_item_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

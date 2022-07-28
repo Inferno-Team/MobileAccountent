@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MobileAccountent" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#86003C</item>
+        <item name="colorPrimaryVariant">#E41F7B</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="login_header_svg">@drawable/ic_login_header_svg_dark</item>
+        <item name="login_header_text_color">@color/black</item>
+        <item name="login_sign_up_hint_color">@color/black</item>
+        <item name="login_background_color">#E6C7C6</item>
+        <item name="login_input_hint_color">#EEEEEE</item>
+        <item name="admin_background_header">@drawable/ic_login_header_svg_dark</item>
+        <item name="admin_background_card">#595959</item>
+        <item name="admin_background_card_items">@color/gray800</item>
+        <item name="admin_text_color">@color/white</item>
+        <item name="admin_icon_color">@color/white</item>
+        <item name="admin_hint_color">@color/gray_200</item>
+        <item name="admin_dashboard_card_width_dims">0.38</item>
+        <item name="admin_dashboard_card_width_dims_max">0.21</item>
+        <item name="admin_dashboard_card_icon_dims">0.29</item>
+
+        <item name="admin_card_child_1_start_color">#FF5D5D79</item>
+        <item name="admin_card_child_1_end_color">@color/white</item>
+
+        <item name="admin_card_child_2_start_color">#FFD4817E</item>
+        <item name="admin_card_child_2_end_color">@color/white</item>
+
+        <item name="admin_card_child_3_start_color">#FF5D5D79</item>
+        <item name="admin_card_child_3_end_color">@color/white</item>
+
+        <item name="admin_card_child_4_start_color">#FFD4817E</item>
+        <item name="admin_card_child_4_end_color">@color/white</item>
+
+    </style>
+</resources>

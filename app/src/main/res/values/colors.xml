@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="yellow_200">#FFEA00</color>
+    <color name="yellow_700">#FFC400</color>
+
+    <!-- Light Theme Colors -->
+    <color name="cerise">#E93B81</color>
+    <color name="illusion">#F5ABC9</color>
+    <color name="pippin">#FFE5E2</color>
+    <color name="perano">#B6C9F0</color>
+    <!-- Dark Theme Colors -->
+    <color name="black">#000000</color>
+    <color name="siren">#86003C</color>
+    <color name="cerise_red">#E41F7B</color>
+    <color name="pink_salmon">#FF8BA0</color>
+
+    <color name="_black">#FF000000</color>
+    <color name="gray500">#555555</color>
+    <color name="gray800">#404040</color>
+    <color name="gray_200">#C6C6C6</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    <color name="approved">#00E676</color>-->
+    <!--    <color name="not_approved">#CA1437</color>-->
+    <!--    <color name="approved">#8ABD8B</color>-->
+    <!--    <color name="not_approved">#CA6564</color>-->
+    <color name="approved">#E8E8E8</color>E8E8E8
+    <color name="not_approved">#AEA6BD</color>
+
+</resources>

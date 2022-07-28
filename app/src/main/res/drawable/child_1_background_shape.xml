@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:endColor="?attr/admin_card_child_1_end_color"
+        android:startColor="?attr/admin_card_child_1_start_color"
+        android:centerColor="?attr/admin_card_child_1_start_color"
+        android:angle="90"/>
+</shape>

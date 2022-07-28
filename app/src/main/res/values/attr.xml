@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="login_header_svg" format="reference" />
+    <attr name="login_header_text_color" format="color"/>
+    <attr name="login_background_color" format="color" />
+    <attr name="login_input_hint_color" format="color"/>
+    <attr name="login_sign_up_hint_color" format="color"/>
+    <attr name="admin_background_header" format="reference" />
+    <attr name="admin_background_card" format="color" />
+    <attr name="admin_text_color" format="color" />
+    <attr name="admin_hint_color" format="color" />
+    <attr name="admin_icon_color" format="color" />
+    <attr name="admin_background_card_items" format="color" />
+    <attr name="admin_dashboard_card_width_dims" format="float" />
+    <attr name="admin_dashboard_card_width_dims_max" format="float" />
+    <attr name="admin_dashboard_card_icon_dims" format="float" />
+    <attr name="admin_card_child_1_start_color" format="color" />
+    <attr name="admin_card_child_1_end_color" format="color" />
+    <attr name="admin_card_child_2_start_color" format="color" />
+    <attr name="admin_card_child_2_end_color" format="color" />
+    <attr name="admin_card_child_3_start_color" format="color" />
+    <attr name="admin_card_child_3_end_color" format="color" />
+    <attr name="admin_card_child_4_start_color" format="color" />
+    <attr name="admin_card_child_4_end_color" format="color" />
+
+
+</resources>
